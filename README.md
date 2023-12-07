@@ -1,13 +1,9 @@
 # Exploratory Data Analysis: Steam Games
+![cover](images/cover.jpg)
+
 This project is under continuous updating! My next plan is to build an interactive dashboard for players to see the most popular games according to different genres!
 ## Technologies
-1. Python
-
-Pandas
-
-Numpy
-
-MatPlotLib
+Python (Pandas, Numpy, MatPlotLib) for data analysis and visualization
 
 ## Abstract
 Steam is a video game digital distribution service and storefront developed by Valve Corporation. This dataset is from [Kaggle dataset](https://www.kaggle.com/datasets/nikdavis/steam-store-games) containing more than 27k Steam games and information including game names, genres, playtime, ratings, price, etc.
@@ -30,13 +26,13 @@ I can define the "popularity of games" based on many performance metrics, such a
 
 The raw dataset has one categorical column which classifies the numbers of owners, and 6 games are owned by more than 20 million gamers, which are Dota 2, Counter-Strike: Global Offensive, Playerunknown's Battlegrounds, Team Fortress 2, Warframe, and Unturned.
 
-[picture1]
+[table1](images/table1.png)
 
 - Number of Ratings
 
 By adding the positive ratings and negative ratings, I obtained the total ratings of the games. The list of top 6 games is a little bit different from the last one which adds Grand Theft Auto V and Garry's Mod.
 
-[pic2]
+[top_rating2](images/top_rating2.png)
 
 - Positive rate
 
@@ -44,7 +40,7 @@ Many games have a high positive rate. However, I cannot only utilize positive ra
 
 Therefore, I set the threshold of the number of owners as 20k and the positive rate larger than 0.8. Here is what I got:
 
-[pic3]
+[top_positive_rate3](images/top_positive_rate3.png)
 
 The top three games with positive rates are Portal 2, Factorio, and Rimworld!
 
@@ -54,13 +50,13 @@ Given the columns of `average playtime` and `median playtime`, I found the games
 
 Therefore, I explore further on playtime variables. I built the new column `playtime indicator` which equals `average_playtime - median_playtime`. The larger the differences, the more portion of players invest a considerable amount of time in the game. Here is the game list which has the most differences: Dota2, Final Fantasy XIV Online and Counter-Strike-Global Offensive. This list aligns with the previous list well!
 
-[pic4]
+[playtime4](images/playtime4.png)
 
 ### The most popular genres
 
 From the analysis, the most popular genres are: Action, Adeventure, and Casual. One thing worth noticing is that "Indie" appears lots of times in the top genres. Indie games are getting more and more popular among developers!
 
-[pic5]
+[genres5](images/genres5.png)
 
 ## Results
 
